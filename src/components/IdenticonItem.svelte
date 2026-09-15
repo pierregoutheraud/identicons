@@ -17,6 +17,7 @@
 </script>
 
 <script lang="ts">
+	import { dev } from "$app/environment";
 	import Identicon from "$lib/components/Identicon/Identicon.svelte";
 	import { type IdenticonOptions } from "$lib/engine/Identicon.js";
 	import {
@@ -105,7 +106,9 @@
 		<Code {params} />
 		<Button onclick={handleDownload}>Download image</Button>
 		<Button onclick={() => handleCopyLink(params)}>Copy link</Button>
-		<Button href={paintHref}>Paint this</Button>
+		{#if dev}
+			<Button href={paintHref}>Paint this</Button>
+		{/if}
 		<Button href={faviconHref} variant="outline">Create favicon</Button>
 	</div>
 </div>
