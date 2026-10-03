@@ -2,7 +2,7 @@
 	import { untrack } from "svelte";
 	import { goto } from "$app/navigation";
 	import { page } from "$app/stores";
-	import type { IdenticonOptions } from "$lib/engine/Identicon.js";
+	import type { IdenticonOptions } from "@pierregoutheraud/identicons-core";
 	import Identicon from "$lib/components/Identicon/Identicon.svelte";
 	import { generatePseudoWord } from "$lib/helpers/general.helpers.js";
 	import IdenticonItem, {
@@ -173,7 +173,7 @@
 			textPosition="center"
 		/>
 		<a
-			href="https://github.com/pierregoutheraud/svelte-identicons"
+			href="https://github.com/pierregoutheraud/identicons"
 			target="_blank"
 		>
 			Github repository

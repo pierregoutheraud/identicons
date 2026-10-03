@@ -1,7 +1,9 @@
 <script lang="ts">
 	import Identicon from "$lib/components/Identicon/Identicon.svelte";
-	import { generateRandomHex } from "$lib/helpers/colors.helpers.js";
-	import { generatePseudoWord } from "$lib/helpers/general.helpers.js";
+	import {
+		generatePseudoWord,
+		generateRandomHex
+	} from "$lib/helpers/general.helpers.js";
 	import { onMount } from "svelte";
 
 	let canvasElement = $state<HTMLCanvasElement | undefined>();

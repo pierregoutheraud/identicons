@@ -1,8 +1,5 @@
-import {
-	PIXEL_3x3_LETTERS,
-	PIXEL_3x4_LETTERS
-} from "$lib/constants/pixel-letters.js";
-import { hslToHex } from "$lib/helpers/colors.helpers.js";
+import { hslToHex } from "./colors.js";
+import { PIXEL_3x3_LETTERS, PIXEL_3x4_LETTERS } from "./pixel-letters.js";
 import {
 	axisDistance,
 	cellValue,

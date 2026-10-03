@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { untrack } from "svelte";
-	import Identicon, { type IdenticonOptions } from "../../engine/Identicon.js";
+	import Identicon, {
+		type IdenticonOptions
+	} from "@pierregoutheraud/identicons-core";
 
 	interface Props {
 		height: number; // height in blocks

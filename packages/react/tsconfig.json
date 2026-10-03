@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"lib": ["ES2022", "DOM", "DOM.Iterable"],
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"jsx": "react-jsx",
+		"strict": true,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"outDir": "dist",
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"types": ["node"]
+	},
+	"include": ["src", "playground", "vite.config.ts"]
+}

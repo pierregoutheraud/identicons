@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IdenticonOptions } from "$lib/engine/Identicon.js";
+	import type { IdenticonOptions } from "@pierregoutheraud/identicons-core";
 	import PaintCanvasSheet from "./PaintCanvasSheet.svelte";
 	import PaintFoldGuide from "./PaintFoldGuide.svelte";
 	import PaintGridCellLayer from "./PaintGridCellLayer.svelte";

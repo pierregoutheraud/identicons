@@ -1,6 +1,10 @@
 {
 	"name": "svelte-identicons",
-	"repository": "github:pierregoutheraud/svelte-identicons",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pierregoutheraud/identicons.git",
+		"directory": "packages/svelte"
+	},
 	"homepage": "https://svelte-identicons.vercel.app/",
 	"version": "2.1.0",
 	"description": "Svelte component to generate identicons",
@@ -15,18 +19,18 @@
 	],
 	"author": "github.com/pierregoutheraud",
 	"license": "MIT",
-	"packageManager": "pnpm@10.11.0",
 	"scripts": {
 		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
-		"prepublishOnly": "npm run package",
+		"prepublishOnly": "pnpm run package",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"test": "vitest run",
+		"lint": "prettier --check . --ignore-path ../../.prettierignore && eslint .",
+		"format": "prettier --write . --ignore-path ../../.prettierignore"
 	},
 	"exports": {
 		".": {
@@ -42,11 +46,15 @@
 	"peerDependencies": {
 		"svelte": "^5.0.0"
 	},
+	"dependencies": {
+		"@pierregoutheraud/identicons-core": "workspace:^"
+	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^6.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/package": "^2.5.8",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@types/node": "^24.19.1",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"eslint": "^8.28.0",

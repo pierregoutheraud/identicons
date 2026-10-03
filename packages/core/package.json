@@ -1,0 +1,50 @@
+{
+	"name": "@pierregoutheraud/identicons-core",
+	"version": "1.0.0",
+	"description": "Framework-agnostic engine that draws seeded pixel identicons on a canvas",
+	"keywords": [
+		"identicon",
+		"seed",
+		"avatar",
+		"hash",
+		"canvas",
+		"generated"
+	],
+	"author": "github.com/pierregoutheraud",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pierregoutheraud/identicons.git",
+		"directory": "packages/core"
+	},
+	"homepage": "https://svelte-identicons.vercel.app/",
+	"type": "module",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist",
+		"src",
+		"!**/*.test.*"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
+		"dev": "tsc -p tsconfig.build.json --watch",
+		"check": "tsc --noEmit",
+		"test": "vitest run",
+		"prepublishOnly": "pnpm run build && publint"
+	},
+	"devDependencies": {
+		"publint": "^0.3.0",
+		"typescript": "^5.0.0",
+		"vitest": "^4.0.0"
+	}
+}

@@ -1,4 +1,4 @@
-import type { IdenticonOptions } from "$lib/engine/Identicon.js";
+import type { IdenticonOptions } from "@pierregoutheraud/identicons-core";
 
 export interface PaintGridLayout {
 	padX: number;

@@ -1,5 +1,8 @@
-import Identicon, { type IdenticonOptions } from "$lib/engine/Identicon.js";
-import { fmix32, hashStringToInteger } from "$lib/engine/hash.js";
+import Identicon, {
+	fmix32,
+	hashStringToInteger,
+	type IdenticonOptions
+} from "@pierregoutheraud/identicons-core";
 import { generatePseudoWord } from "$lib/helpers/general.helpers.js";
 
 export interface PaintParams {

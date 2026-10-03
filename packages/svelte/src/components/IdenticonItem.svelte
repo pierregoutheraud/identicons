@@ -19,7 +19,7 @@
 <script lang="ts">
 	import { dev } from "$app/environment";
 	import Identicon from "$lib/components/Identicon/Identicon.svelte";
-	import { type IdenticonOptions } from "$lib/engine/Identicon.js";
+	import { type IdenticonOptions } from "@pierregoutheraud/identicons-core";
 	import {
 		serializeFaviconParams,
 		toFaviconSymetry
