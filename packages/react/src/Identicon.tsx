@@ -121,6 +121,11 @@ export const Identicon = forwardRef<HTMLCanvasElement, IdenticonProps>(
 			// not leave a blank canvas.
 			onColorsRef.current?.(identicon.options.colors);
 		}, [
+			// Never changes in production. Listed so that when an engine edit is
+			// hot-swapped in development the canvas redraws: Fast Refresh keeps this
+			// component mounted and would otherwise skip the effect, since none of
+			// the props changed.
+			IdenticonEngine,
 			seed,
 			height,
 			width,
